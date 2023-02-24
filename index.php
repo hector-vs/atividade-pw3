@@ -1,34 +1,28 @@
+<?php 
+    include('conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload/Download</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="base">
         <main>
-            <article id="left">s
-                <div id="content-1">
-                    <form action="" autocomplete="off">
-                        <label for="server" style="margin-right: 150px;">Login:</label>
-                        <input type="text" name="user" id="user" placeholder="User">
-                        <input type="password" name="pass" id="pass" placeholder="Password">
-                        <label for="server">Server:</label>
-                        <input type="text" name="server" id="server" placeholder="ftp://www...">
-                        <h4>Upload</h4>
-                        <label for="file" style="margin-right: 150px;">Arquivo a Enviar:</label>
-                        <input type="file" name="file" id="file">
-                        <input type="submit" value="Enviar" class="enviar">
-                        <h4>Download</h4>
-                        <label for="url" style="margin-right: 150px;">Arquivo:</label>
-                        <input type="text" name="url" id="url" placeholder="https://www...">
-                        <label for="" style="margin-right: 150px;">Baixar para:</label>
-                        <input type="text" name="local" id="local" placeholder="C:\dados\">
-                        <input type="submit" value="Baixar" class="enviar">
+            <article id="left">
+                <div id="content-1-login">
+                    <form action="processalog.php" method="POST" autocomplete="off">
+                        <label for="user" id="labeluser">Login:</label>
+                        <input type="email" name="user" id="user" placeholder="Email" class="inputlogin">
+                        <input type="password" name="pass" id="pass" placeholder="Password" class="inputlogin">
+                        <input type="submit" value="Entrar" id="inputentrar">
                     </form>
+                    <a href="cadastro.php">Cadastrar-se</a>
                 </div>
             </article>
             <article id="right">
