@@ -1,5 +1,4 @@
 <?php
-    SESSION_START();
     include('protecao.php');
 ?>
 <!DOCTYPE html>
