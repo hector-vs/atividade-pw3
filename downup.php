@@ -1,5 +1,6 @@
 <?php
     include('protecao.php');
+    include('download.php');
     include_once('conexao.php');
     require_once('zipar.class.php');
 ?>
@@ -42,6 +43,12 @@
                 echo "<p id='warning' style='background-color: red;'>Upload NÃO FOI realizado com sucesso!</p>";
             }
         }
+
+        if(isset($_GET['file'])){
+            header("Content-Disposition: attachment; filename = " . basename($_GET['file']));
+            readfile($_GET['file']);
+            exit();
+        }
     ?>
     <div class="base">
         <main>
@@ -63,13 +70,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    if(isset($_POST['enviarq'])){
-                                        $sql = "SELECT * FROM arquivos ORDER BY id DESC";
-                                        $result = $mysqli->query($sql);
-                                        while($user_data = mysqli_fetch_assoc($result)){
-                                            echo "<tr> <td>".$user_data['id']."</td> <td>".$user_data['nome']."</td> <td><a href='arquivos/".$arq."'>Download</a></td> </tr>";
-                                        }
-                                    }   
+                                    mostrarArquivoDownload();
                                 ?>
                             </tbody>
                         </table>
