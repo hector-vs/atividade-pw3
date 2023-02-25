@@ -55,6 +55,7 @@ article#right {
 
 div#content-1 {
     margin: 30px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,6 +156,28 @@ a {
     color: gray;
 }
 
+main > article#left > div#content-1 > a#mainbutton {
+    color: white;
+    text-decoration: none;
+    height: 150px;
+    width: 200px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #159A9C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+main > article#left > div#content-1 > a#mainbutton:hover {
+    font-size: 1.2em;
+    background-color: #1dbfc2;
+}
+
 h4 {
     text-align: center;
     font-size: 1.1em;
@@ -165,4 +188,29 @@ h4 {
 #warning {
     padding: 20px;
     color: white;
+}
+
+div#content-1-main {
+    margin: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid black;
+    max-width: 339px;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+div#table-responsive{
+    overflow-x: auto;
+    overflow-y: auto;
 }
